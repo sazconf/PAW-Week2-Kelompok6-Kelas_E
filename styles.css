@@ -174,6 +174,46 @@ body {
   backdrop-filter: blur(10px);
 }
 
+.model-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 130px;
+}
+
+.visual-node {
+  display: grid;
+  place-items: center;
+  width: 76px;
+  height: 76px;
+  border: 1px solid rgba(147, 197, 253, 0.45);
+  border-radius: 50%;
+  color: #bfdbfe;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.visual-node-accent {
+  background-color: var(--accent-color);
+  border-color: #93c5fd;
+  color: #ffffff;
+  box-shadow: 0 0 0 8px rgba(37, 99, 235, 0.15);
+}
+
+.visual-line {
+  width: 22px;
+  height: 1px;
+  background-color: #60a5fa;
+}
+
+.visual-caption {
+  color: #cbd5e1;
+  font-size: 0.88rem;
+  text-align: center;
+}
+
 .hero-card h3 {
   font-size: 1.1rem;
   margin-bottom: 1rem;
@@ -270,6 +310,61 @@ body {
   text-decoration: underline;
 }
 
+/* ========================================================================
+   RESEARCH TOPIC SECTIONS
+   ======================================================================== */
+
+.topic-section {
+  padding: 4rem 0;
+  background-color: #ffffff;
+  border-top: 1px solid var(--border-color);
+}
+
+.topic-section-dark {
+  background-color: var(--secondary-color);
+  color: #ffffff;
+}
+
+.topic-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.8fr) 1.2fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.topic-layout h2 {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  line-height: 1.25;
+  margin-top: 0.5rem;
+}
+
+.topic-section-dark .topic-layout h2 {
+  color: #ffffff;
+}
+
+.topic-layout p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  max-width: 680px;
+}
+
+.topic-section-dark .topic-layout p {
+  color: #cbd5e1;
+}
+
+.eyebrow {
+  color: var(--accent-color);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.topic-section-dark .eyebrow {
+  color: #93c5fd;
+}
+
 /* ==========================================================================
    FOOTER
    ========================================================================== */
@@ -298,13 +393,23 @@ body {
    Point 5 & 6: MEDIA QUERIES (DESKTOP & MOBILE RESPONSIVENESS)
    ========================================================================== */
 
-@media (max-width: 850px) {
+@media (max-width: 900px) {
   .hero-container {
     grid-template-columns: 1fr;
   }
 
   .feature-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nav-menu {
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .topic-layout {
+    gap: 2rem;
   }
 }
 
@@ -312,6 +417,15 @@ body {
   .nav-container {
     flex-direction: column;
     gap: 0.75rem;
+  }
+
+  .nav-menu {
+    justify-content: center;
+    gap: 0.65rem 1rem;
+  }
+
+  .nav-menu a {
+    font-size: 0.85rem;
   }
 
   .hero {
@@ -333,5 +447,22 @@ body {
 
   .features-section {
     padding: 2.5rem 0;
+  }
+
+  .feature-grid,
+  .topic-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .topic-section {
+    padding: 2.75rem 0;
+  }
+
+  .topic-layout h2 {
+    font-size: 1.5rem;
+  }
+
+  .model-visual {
+    gap: 0.25rem;
   }
 }

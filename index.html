@@ -15,8 +15,11 @@
       <a href="index.html" class="nav-logo">ML-WebSecurity</a>
       <ul class="nav-menu">
         <li><a href="index.html" class="active">Home</a></li>
-        <!-- Connecting to the previous Week 2 landing page -->
-        <li><a href="landing-page.html">Paper Review (Landing Page)</a></li>
+        <li><a href="#features">Research Topics</a></li>
+        <li><a href="#technology">Technology</a></li>
+        <li><a href="#cybersecurity">Cybersecurity</a></li>
+        <li><a href="#mlops">MLOps</a></li>
+        <li><a href="landing-page.html">Paper Review</a></li>
       </ul>
     </div>
   </nav>
@@ -27,20 +30,21 @@
       <div class="hero-content">
         <span class="badge">Group 6 • PAW Project</span>
         <h1>Machine Learning Models in Web Applications</h1>
-        <p>Exploring backend framework integrations (Python vs. Node.js) and machine learning-powered Web Application Firewalls (WAF) for cyber defense[cite: 1].</p>
+        <p>Exploring how machine learning can be integrated into modern web applications through backend architectures, adaptive cybersecurity, and MLOps.</p>
         <div class="hero-buttons">
           <a href="landing-page.html" class="btn btn-primary">Read Full Paper Review</a>
           <a href="#features" class="btn btn-secondary">Explore Key Topics</a>
         </div>
       </div>
       <div class="hero-card">
-        <h3>Group 6 Members</h3>
-        <ul class="member-list">
-          <li><strong>Student ID (NIM):</strong> 145[cite: 2]</li>
-          <li><strong>Student ID (NIM):</strong> 146[cite: 2]</li>
-          <li><strong>Student ID (NIM):</strong> 147[cite: 2]</li>
-          <li><strong>Student ID (NIM):</strong> 253[cite: 2]</li>
-        </ul>
+        <div class="model-visual" aria-label="Machine learning model flow from data to prediction">
+          <span class="visual-node">DATA</span>
+          <span class="visual-line"></span>
+          <span class="visual-node visual-node-accent">MODEL</span>
+          <span class="visual-line"></span>
+          <span class="visual-node">WEB APP</span>
+        </div>
+        <p class="visual-caption">From training data to monitored web application inference.</p>
       </div>
     </div>
   </header>
@@ -50,37 +54,81 @@
     <section id="features" class="features-section">
       <div class="container">
         <h2 class="section-title">Core Research Focus Areas</h2>
-        <p class="section-subtitle">Key domains covered in our group's journal review[cite: 1].</p>
+        <p class="section-subtitle">Key domains covered in our group's review of machine learning models in web applications.</p>
         
         <div class="feature-grid">
           <article class="card">
-            <div class="card-icon">🐍 vs 🟢</div>
+            <div class="card-icon">01</div>
             <h3>Backend Stack Comparison</h3>
-            <p>Evaluating Python (Flask/Django) vs. Node.js (TensorFlow.js/Brain.js) for serving and scaling machine learning models in production backends[cite: 1].</p>
-            <a href="landing-page.html#about" class="card-link">Learn More &rarr;</a>
+            <p>Python frameworks such as Flask and Django offer mature ML libraries, while Node.js supports JavaScript-based inference and efficient web integration.</p>
+            <a href="#technology" class="card-link">Explore technology &rarr;</a>
           </article>
 
           <article class="card">
-            <div class="card-icon">🛡️</div>
-            <h3>ML-Powered Firewalls</h3>
-            <p>Combining Signature-Based Detection (SBD) with Anomaly-Based Detection (ABD) to neutralize threats like SQL Injection and XSS attacks[cite: 1].</p>
-            <a href="landing-page.html#about" class="card-link">Learn More &rarr;</a>
+            <div class="card-icon">02</div>
+            <h3>ML-Powered Web Security</h3>
+            <p>Web Application Firewalls can combine signature-based and anomaly-based detection to identify threats such as SQL injection and cross-site scripting.</p>
+            <a href="#cybersecurity" class="card-link">Explore security &rarr;</a>
           </article>
 
           <article class="card">
-            <div class="card-icon">🐳</div>
-            <h3>MLOps & Containerization</h3>
-            <p>Implementing Docker, Kubernetes, and CI/CD pipelines to guarantee model reproducibility, auto-scaling, and low latency in production environments[cite: 1].</p>
-            <a href="landing-page.html#about" class="card-link">Learn More &rarr;</a>
+            <div class="card-icon">03</div>
+            <h3>MLOps &amp; Deployment</h3>
+            <p>Containerization, cloud orchestration, CI/CD, scaling, and monitoring help keep models reproducible and reliable after deployment.</p>
+            <a href="#mlops" class="card-link">Explore MLOps &rarr;</a>
           </article>
 
           <article class="card">
-            <div class="card-icon">📊</div>
-            <h3>Industrial Case Studies</h3>
-            <p>Analyzing real-world enterprise deployments including Google Cloud Armor's adaptive protection and Netflix's unified recommendation foundation model[cite: 1].</p>
-            <a href="landing-page.html#about" class="card-link">Learn More &rarr;</a>
+            <div class="card-icon">04</div>
+            <h3>Industry Applications</h3>
+            <p>The review connects these ideas to enterprise examples including adaptive cloud protection and recommendation systems.</p>
+            <a href="#applications" class="card-link">Explore applications &rarr;</a>
           </article>
         </div>
+      </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology" class="topic-section">
+      <div class="container topic-layout">
+        <div>
+          <span class="eyebrow">01 / Technology</span>
+          <h2>Choosing a backend for model integration</h2>
+        </div>
+        <p>The review compares Python and Node.js as practical choices for serving machine learning models. Framework selection depends on library support, inference needs, team expertise, and how closely the model service must integrate with the web backend.</p>
+      </div>
+    </section>
+
+    <!-- Cybersecurity Section -->
+    <section id="cybersecurity" class="topic-section topic-section-dark">
+      <div class="container topic-layout">
+        <div>
+          <span class="eyebrow">02 / Cybersecurity</span>
+          <h2>Security that adapts to web traffic</h2>
+        </div>
+        <p>ML-supported WAF concepts extend traditional signatures with anomaly detection. This combination can help identify changing patterns in malicious traffic while supporting defenses against SQL injection and XSS.</p>
+      </div>
+    </section>
+
+    <!-- MLOps Section -->
+    <section id="mlops" class="topic-section">
+      <div class="container topic-layout">
+        <div>
+          <span class="eyebrow">03 / MLOps</span>
+          <h2>Operational discipline for living models</h2>
+        </div>
+        <p>Docker, Kubernetes, CI/CD pipelines, and monitoring provide the operational foundation for reproducible deployment, scaling, low-latency inference, and awareness of data drift.</p>
+      </div>
+    </section>
+
+    <!-- Applications Section -->
+    <section id="applications" class="topic-section topic-section-dark">
+      <div class="container topic-layout">
+        <div>
+          <span class="eyebrow">04 / Applications</span>
+          <h2>From adaptive protection to recommendations</h2>
+        </div>
+        <p>Industry examples in the review show how model-driven systems can support adaptive web protection and personalized services, provided the underlying architecture is maintained and monitored.</p>
       </div>
     </section>
   </main>
